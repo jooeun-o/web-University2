@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
     <title> 🔹로그인 폼 </title>
+    <script>
+        function showAlert() {
+            alert("역시 사람이시군요! ");
+        }
+
+        // "아니요" 버튼 클릭 시 다른 메시지 표시
+        function showNotHumanAlert() {
+            alert("예???");
+        }
+    </script>
 </head>
 <body>
     <h3>로그인 폼</h3>
@@ -21,7 +31,8 @@
     <input type="submit" value="인증메일 발송하기"><br>
     
     사람인가요?
-    <input type="submit" value="네"><input type="submit" value="아니요"><br>
+    <button type="button" onclick="showAlert()">네</button> <!-- "네" 클릭 시 알럿 노출 -->
+    <button type="button" onclick="showNotHumanAlert()">아니요</button> <!-- "아니요" 클릭 시 다른 알럿 -->
 
 </form>
 </body>

@@ -22,15 +22,15 @@
 
         /* 전체 레이아웃 스타일 */
         body {
-            background: rgb(30, 30, 30); /* 어두운 배경색 */
-            font-family: 'Pretendard-Regular', sans-serif; /* 기본 폰트 */
+            background: rgb(30, 30, 30);
+            font-family: 'Pretendard-Regular', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: row; /* 가로형 레이아웃 */
-            height: 100vh; /* 화면 높이 전체 사용 */
+            flex-direction: row;
+            height: 100vh;
             overflow: hidden;
-            color: #ffffff; /* 텍스트 기본 색상: 흰색 */
+            color: #ffffff;
         }
 
         /* 헤드 폰트 */
@@ -40,17 +40,17 @@
 
         /* 왼쪽 섹션 스타일 */
         .left-section {
-            background-color: rgb(50, 50, 50); /* 어두운 회색 */
-            flex: 1; /* 남은 공간을 균등 분배 */
+            background-color: rgb(50, 50, 50);
+            flex: 1;
             padding: 20px;
-            overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
-            border-right: 2px solid rgb(80, 80, 80); /* 경계선 */
+            overflow-y: auto;
+            border-right: 2px solid rgb(80, 80, 80);
             text-align: center;
         }
 
         /* 오른쪽 섹션 스타일 */
         .right-section {
-            background-color: rgb(40, 40, 40); /* 어두운 배경 */
+            background-color: rgb(40, 40, 40);
             flex: 2; 
             padding: 20px;
             overflow-y: auto; 
@@ -73,53 +73,6 @@
 
         .btn:hover {
             background-color: #45a049;
-        }
-
-        /* 리스트 스타일 */
-        li {
-            margin-bottom: 10px;
-        }
-
-        ol {
-            margin-left: 20px;
-        }
-
-        /* 테이블 스타일 */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            background-color: rgb(60, 60, 60); /* 테이블 배경 */
-            color: #ffffff; /* 테이블 텍스트 색상 */
-        }
-
-        th, td {
-            border: 1px solid rgb(90, 90, 90); /* 테두리 색 */
-            text-align: center;
-            padding: 10px;
-        }
-
-        th {
-            background-color: rgb(80, 80, 80); /* 테이블 헤더 배경 */
-        }
-
-        /* 캡션 스타일 (h2와 동일한 폰트, 흰색 적용) */
-        caption {
-            font-family: 'Paperlogy-8ExtraBold', sans-serif;
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffffff; /* 흰색 */
-            margin-bottom: 10px;
-        }
-
-        /* 링크 스타일 */
-        a {
-            color: #6cdcf8;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
     </style>
     <script>
@@ -163,113 +116,62 @@
                     <h2>필수요소 적용 안내</h2>
                     <hr>
                     <ol>
-                        <h3>From</h3>
-                        <li> 회원가입 항목 > 아이디 비번/ 중복확인/완료/인증메일 발송 버튼 </li>
-
-                        <h3>Event</h3>
-                        <li> 메인 페이지가 로딩 되었을 때, 공지사항 팝업창 자동 실행 </li>
-                        <li> 팝업을 닫을 때 누르는 버튼 </li>
-                        <li> 회원가입 창 alert() </li>
-                        <li> 회원가입 항목 > 사람인가요 유 무 선택시 알림창 실행 </li>
-
+                        <li>회원가입 항목 > 아이디 비번/중복확인/완료/인증메일 발송 버튼</li>
+                        <li>유튜브 영상, 라디오 버튼</li>
+                        <li>유튜브 영상, 체크 버튼</li>
                     </ol>
-                    <button onclick="window.close()">닫기</button>
+                    <button class="btn" onclick="window.close()">닫기</button>
                 </body>
                 </html>
             `);
         }
+
+        function handleVideoSelection() {
+            const selectedOption = document.querySelector('input[name="video"]:checked');
+            if (selectedOption) {
+                window.open(selectedOption.value, '_blank');
+            } else {
+                alert("영상을 선택해주세요!");
+            }
+        }
     </script>
 </head>
 <body>
-    <!-- 왼쪽 섹션 -->
     <div class="left-section">
         <h1> “안녕하세요! 미래인재학부 오주은 입니다.” </h1>
         <hr>
-        <img 
-            src="Frame 1.png"
-            width="500"
-            height="500" 
-            alt="자기 사진">
+        <img src="Frame 1.png" width="300" height="300" alt="자기 사진">
         <hr>
-        <button class="btn" onclick="window.open('add.html', '_blank')">📌 회원가입 하러가기</button> 
+        <button class="btn" onclick="window.open('add.html', '_blank')">📌 회원가입 하러가기</button>
         <hr>
-
-        <h3> 🎵 Mugic 🎵 </h3>
-        <!-- 라디오 버튼을 가로로 배치 -->
+        <h3>🎵 Mugic 🎵</h3>
         <div class="radio-container">
             <label>
-                <input type="radio" name="video" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                유튜브 영상 1
+                <input type="radio" name="video" value="https://youtu.be/a_80o2lDYec?si=hAy5l9ebpyEcDzga">
+                크리스마스 캐롤 플리
             </label>
             <label>
-                <input type="radio" name="video" value="https://www.youtube.com/watch?v=3JZ_D3ELwOQ">
-                유튜브 영상 2
+                <input type="radio" name="video" value="https://youtu.be/1ptLqV-Bl0Q?si=_ui7SatzEtqe88u-">
+                수능 금지곡 플리
             </label>
             <label>
-                <input type="radio" name="video" value="https://www.youtube.com/watch?v=tgbNymZ7vqY">
-                유튜브 영상 3
+                <input type="radio" name="video" value="https://youtu.be/uwf9JYIAlIA?si=leAGL4t1d8QxAfMa">
+                해외 영화 OST 플리
             </label>
-
-        <br>
+        </div>
         <button class="btn" type="button" onclick="handleVideoSelection()">선택한 영상 보기</button>
-
-            
     </div>
 
-
-    <hr>
-    </div>
-
-    <!-- 오른쪽 섹션 -->
     <div class="right-section">
-        
-        <h2> 🔹 기본정보 </h2>
+        <h2>🔹 기본정보</h2>
         <ol>
             <li>이름: 오주은</li>
-            <li>학교: 한성대학교
-                <img 
-                src="https://www.hansung.ac.kr/sites/hansung/images/sub/ui_3.png"
-                width="20"
-                height="20" 
-                alt="학교 로고">
-            </li>
+            <li>학교: 한성대학교 <img src="https://www.hansung.ac.kr/sites/hansung/images/sub/ui_3.png" width="20" height="20" alt="학교 로고"></li>
             <li>학과: <a href="https://futureplus.hansung.ac.kr/ko/department/future" target="_blank">미래인재학부</a></li>
             <li>학번: 2406001</li>
             <li>주소: 경기도</li>
-            <li>하는일 : 퍼포먼스마케터 </li>
+            <li>하는일: 퍼포먼스마케터</li>
         </ol>
-        
-        <h2>🔹 취미</h2>
-        <ol type="1">
-            <li>영상 보는 것을 좋아합니다.</li>
-            <li>게임을 자주 합니다.</li>
-            <li>낮잠 좋아합니다.</li>
-        </ol>
-
-        <h2>🔹 좋아하는 음식</h2>
-        <ol type="1">
-            <li>초밥 짱 좋아용</li>
-            <li>날로먹는거 좋아용</li>
-            <li>탄수화물이 좋아용</li>
-        </ol>
-
-        <h2>🔹 수강하는 과목들</h2>
-        <table>
-            <caption>⏰24년 2학기, 시간표⏰</caption>
-            <thead>
-                <tr><th>과목</th><th>시간</th></tr>
-            </thead>
-            <tfoot>
-                <tr><th>학부: 미래인재학부</th><th>학번: 2406001</th></tr>
-            </tfoot>
-            <tbody>
-                <tr><td>데이터사이언스기초</td><td>09:00</td></tr>
-                <tr><td>C프로그래밍</td><td>13:00</td></tr>
-                <tr><td>웹프로그래밍</td><td>15:00</td></tr>
-                <tr><td>AI와소프트웨어</td><td>16:00</td></tr>
-            </tbody>
-        </table>
-
     </div>
 </body>
 </html>

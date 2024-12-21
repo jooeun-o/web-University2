@@ -6,17 +6,17 @@
     <style>
         /* 폰트 정의 */
         @font-face {
-            font-family: 'Paperlogy-8ExtraBold';
-            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
-            font-weight: 800;
-            font-style: normal;
-}
+            font-family: 'GangwonEdu_OTFBoldA';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') 
+            format('woff');
+            font-weight: bold;
+            font-style: normal; 
         }
 
         /* 전체 레이아웃 스타일 */
         body {
-            background: rgb(40, 40, 40); /* 어두운 배경색 */
-            font-family: 'Paperlogy-8ExtraBold', sans-serif;
+            background: rgb(30, 30, 30); /* 어두운 배경색 */
+            font-family: 'GangwonEdu_OTFBoldA', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -28,10 +28,11 @@
 
         /* 왼쪽 섹션 스타일 */
         .left-section {
-            background-color: rgb(8,22,47);
-            flex: 1;
+            background-color: rgb(50, 50, 50); /* 어두운 회색 */
+            flex: 1; /* 남은 공간을 균등 분배 */
             padding: 20px;
-            overflow-y: auto; 
+            overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
+            border-right: 2px solid rgb(80, 80, 80); /* 경계선 */
         }
 
         /* 오른쪽 섹션 스타일 */
@@ -108,12 +109,12 @@
             height="500" 
             alt="자기 사진">
         <hr>
-    
+        <a href="add.html" target="_blank"> 📌 회원가입 하러가기 </a>
     </div>
 
     <!-- 오른쪽 섹션 -->
     <div class="right-section">
-        <h2>➡️취미</h2>
+        <h2>➡️ 취미</h2>
         <ol type="1">
             <li>영상 보는 것을 좋아합니다.</li>
             <li>게임을 자주 합니다.</li>
@@ -142,7 +143,7 @@
                 <tr><td>AI와소프트웨어</td><td>16:00</td></tr>
             </tbody>
         </table>
-         <ol>
+        <ol>
             <li>이름: 오주은</li>
             <li>학교: 한성대학교
                 <img 
@@ -155,8 +156,7 @@
             <li>학번: 2406001</li>
             <li>주소: 경기도</li>
         </ol>
-        <hr>
-        <a href="add.html" target="_blank"> 📌회원가입 하러가기 </a>
+        
     </div>
 </body>
 </html>

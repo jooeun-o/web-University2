@@ -4,7 +4,15 @@
 <meta charset="utf-8">
     <title> 자기소개 페이지 </title>
     <style>
-        /* 폰트 정의 */
+        /* 헤드 폰트 정의 */
+        @font-face {
+            font-family: 'Paperlogy-8ExtraBold';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        /* 기본 폰트 정의 */
         @font-face {
             font-family: 'GangwonEdu_OTFBoldA';
             src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') 
@@ -16,7 +24,7 @@
         /* 전체 레이아웃 스타일 */
         body {
             background: rgb(30, 30, 30); /* 어두운 배경색 */
-            font-family: 'GangwonEdu_OTFBoldA', sans-serif;
+            font-family: 'GangwonEdu_OTFBoldA', sans-serif; /* 기본 폰트 */
             margin: 0;
             padding: 0;
             display: flex;
@@ -26,6 +34,11 @@
             color: #ffffff; /* 텍스트 기본 색상: 흰색 */
         }
 
+        /* 헤드 폰트 */
+        h1, h2 {
+            font-family: 'Paperlogy-8ExtraBold', sans-serif;
+        }
+
         /* 왼쪽 섹션 스타일 */
         .left-section {
             background-color: rgb(50, 50, 50); /* 어두운 회색 */
@@ -33,6 +46,7 @@
             padding: 20px;
             overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
             border-right: 2px solid rgb(80, 80, 80); /* 경계선 */
+            text-align: center;
         }
 
         /* 오른쪽 섹션 스타일 */
@@ -43,14 +57,23 @@
             overflow-y: auto; 
         }
 
-        /* 헤딩 스타일 */
-        h2 {
-            color: #ffc107; /* 밝은 노란색 */
-            font-size: 24px;
+        /* 버튼 스타일 */
+        .btn {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
         }
 
-        h1 {
-            color: #ff9800; /* 오렌지색 */
+        .btn:hover {
+            background-color: #45a049;
         }
 
         /* 리스트 스타일 */
@@ -97,6 +120,26 @@
             text-decoration: underline;
         }
     </style>
+    <script>
+        // 페이지 접속 시 팝업창 열기
+        window.onload = function () {
+            openPopup();
+        };
+
+        function openPopup() {
+            const popup = window.open("", "popupWindow", "width=400,height=300");
+            popup.document.write(`
+                <html>
+                <head><title> ⚠ 공지사항 </title></head>
+                <body style="text-align:center; padding:20px; font-family:sans-serif;">
+                    <h2>팝업 내용</h2>
+                    <p>여기에 내용을 입력하세요.</p>
+                    <button onclick="window.close()" style="padding:10px 20px; background-color:#4caf50; color:white; border:none; border-radius:5px; cursor:pointer;">닫기</button>
+                </body>
+                </html>
+            `);
+        }
+    </script>
 </head>
 <body>
     <!-- 왼쪽 섹션 -->
@@ -109,25 +152,42 @@
             height="500" 
             alt="자기 사진">
         <hr>
-        <a href="add.html" target="_blank"> 📌 회원가입 하러가기 </a>
+        <button class="btn" onclick="window.open('add.html', '_blank')">📌 회원가입 하러가기</button> 
     </div>
 
     <!-- 오른쪽 섹션 -->
     <div class="right-section">
-        <h2>➡️ 취미</h2>
+        
+        <h2> 🔹 기본정보 </h2>
+        <ol>
+            <li>이름: 오주은</li>
+            <li>학교: 한성대학교
+                <img 
+                src="https://www.hansung.ac.kr/sites/hansung/images/sub/ui_3.png"
+                width="20"
+                height="20" 
+                alt="학교 로고">
+            </li>
+            <li>학과: <a href="https://futureplus.hansung.ac.kr/ko/department/future" target="_blank">미래인재학부</a></li>
+            <li>학번: 2406001</li>
+            <li>주소: 경기도</li>
+        </ol>
+        
+        <h2>🔹 취미</h2>
         <ol type="1">
             <li>영상 보는 것을 좋아합니다.</li>
             <li>게임을 자주 합니다.</li>
             <li>낮잠 좋아합니다.</li>
         </ol>
 
-        <h2>➡️좋아하는 음식</h2>
+        <h2>🔹 좋아하는 음식</h2>
         <ol type="1">
-            <li>초밥</li>
-            <li>면류</li>
+            <li>초밥 짱 좋아용</li>
+            <li>날로먹는거 좋아용</li>
+            <li>탄수화물이 좋아용</li>
         </ol>
 
-        <h2>➡️수강하는 과목들</h2>
+        <h2>🔹 수강하는 과목들</h2>
         <table>
             <caption>⏰24년 2학기, 시간표⏰</caption>
             <thead>
@@ -143,20 +203,7 @@
                 <tr><td>AI와소프트웨어</td><td>16:00</td></tr>
             </tbody>
         </table>
-        <ol>
-            <li>이름: 오주은</li>
-            <li>학교: 한성대학교
-                <img 
-                src="https://www.hansung.ac.kr/sites/hansung/images/sub/ui_3.png"
-                width="20"
-                height="20" 
-                alt="학교 로고">
-            </li>
-            <li>학과: <a href="https://futureplus.hansung.ac.kr/ko/department/future" target="_blank">미래인재학부</a></li>
-            <li>학번: 2406001</li>
-            <li>주소: 경기도</li>
-        </ol>
-        
+
     </div>
 </body>
 </html>

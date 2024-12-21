@@ -6,36 +6,37 @@
     <style>
         /* 폰트 정의 */
         @font-face {
-            font-family: 'GangwonEdu_OTFBoldA';
-            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') 
-            format('woff');
-            font-weight: bold;
-            font-style: normal; 
+            font-family: 'Paperlogy-8ExtraBold';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-style: normal;
+}
         }
 
         /* 전체 레이아웃 스타일 */
         body {
-            background: rgb(234, 221, 211);
-            font-family: 'GangwonEdu_OTFBoldA', sans-serif;
+            background: rgb(40, 40, 40); /* 어두운 배경색 */
+            font-family: 'Paperlogy-8ExtraBold', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: row; /* 가로형 레이아웃 */
             height: 100vh; /* 화면 높이 전체 사용 */
             overflow: hidden;
+            color: #ffffff; /* 텍스트 기본 색상: 흰색 */
         }
 
         /* 왼쪽 섹션 스타일 */
         .left-section {
-            background-color: rgb(245, 240, 235);
-            flex: 1; /* 남은 공간을 균등 분배 */
+            background-color: rgb(8,22,47);
+            flex: 1;
             padding: 20px;
-            overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
+            overflow-y: auto; 
         }
 
         /* 오른쪽 섹션 스타일 */
         .right-section {
-            background-color: rgb(255, 247, 242);
+            background-color: rgb(40, 40, 40); /* 어두운 배경 */
             flex: 2; 
             padding: 20px;
             overflow-y: auto; 
@@ -43,8 +44,12 @@
 
         /* 헤딩 스타일 */
         h2 {
-            color: rgb(116, 83, 62);
+            color: #ffc107; /* 밝은 노란색 */
             font-size: 24px;
+        }
+
+        h1 {
+            color: #ff9800; /* 오렌지색 */
         }
 
         /* 리스트 스타일 */
@@ -61,44 +66,49 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
+            background-color: rgb(60, 60, 60); /* 테이블 배경 */
+            color: #ffffff; /* 테이블 텍스트 색상 */
         }
 
         th, td {
-            border: 1px solid rgb(200, 200, 200);
+            border: 1px solid rgb(90, 90, 90); /* 테두리 색 */
             text-align: center;
             padding: 10px;
+        }
+
+        th {
+            background-color: rgb(80, 80, 80); /* 테이블 헤더 배경 */
         }
 
         caption {
             font-weight: bold;
             margin-bottom: 10px;
+            color: #ffc107; /* 캡션 색상 */
+        }
+
+        /* 링크 스타일 */
+        a {
+            color: #4caf50; /* 밝은 초록색 */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <!-- 왼쪽 섹션 -->
     <div class="left-section">
-        <h1>✒️ 자기소개</h1>
+        <h1> “안녕하세요! 미래인재학부 오주은 입니다.” </h1>
         <hr>
         <img 
-            src="me.png"
+            src="Frame 1.png"
             width="500"
             height="500" 
             alt="자기 사진">
         <hr>
-        <ol>
-            <li>이름: 오주은</li>
-            <li>학교: 한성대학교
-                <img 
-                src="https://www.hansung.ac.kr/sites/hansung/images/sub/ui_3.png"
-                width="20"
-                height="20" 
-                alt="학교 로고">
-            </li>
-            <li>학과: <a href="https://futureplus.hansung.ac.kr/ko/department/future" target="_blank">미래인재학부</a></li>
-            <li>학번: 2406001</li>
-            <li>주소: 경기도</li>
-        </ol>
+    
     </div>
 
     <!-- 오른쪽 섹션 -->
@@ -132,6 +142,19 @@
                 <tr><td>AI와소프트웨어</td><td>16:00</td></tr>
             </tbody>
         </table>
+         <ol>
+            <li>이름: 오주은</li>
+            <li>학교: 한성대학교
+                <img 
+                src="https://www.hansung.ac.kr/sites/hansung/images/sub/ui_3.png"
+                width="20"
+                height="20" 
+                alt="학교 로고">
+            </li>
+            <li>학과: <a href="https://futureplus.hansung.ac.kr/ko/department/future" target="_blank">미래인재학부</a></li>
+            <li>학번: 2406001</li>
+            <li>주소: 경기도</li>
+        </ol>
         <hr>
         <a href="add.html" target="_blank"> 📌회원가입 하러가기 </a>
     </div>

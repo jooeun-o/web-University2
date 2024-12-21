@@ -164,11 +164,14 @@
                     <hr>
                     <ol>
                         <h3>From</h3>
-                        <li>1. 회원가입 항목 > 사람인가요 유 무 선택</li>
+                        <li> 회원가입 항목 > 아이디 비번/ 중복확인/완료/인증메일 발송 버튼 </li>
 
                         <h3>Event</h3>
-                        <li>1. 페이지가 로딩 되었을 때, 팝업창 자동 실행</li>
-                        <li>2. 팝업을 닫을 때 누르는 버튼</li>
+                        <li> 메인 페이지가 로딩 되었을 때, 공지사항 팝업창 자동 실행 </li>
+                        <li> 팝업을 닫을 때 누르는 버튼 </li>
+                        <li> 회원가입 창 alert() </li>
+                        <li> 회원가입 항목 > 사람인가요 유 무 선택시 알림창 실행 </li>
+
                     </ol>
                     <button onclick="window.close()">닫기</button>
                 </body>
@@ -189,6 +192,32 @@
             alt="자기 사진">
         <hr>
         <button class="btn" onclick="window.open('add.html', '_blank')">📌 회원가입 하러가기</button> 
+        <hr>
+
+        <h3> 🎵 Mugic 🎵 </h3>
+        <!-- 라디오 버튼을 가로로 배치 -->
+        <div class="radio-container">
+            <label>
+                <input type="radio" name="video" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                유튜브 영상 1
+            </label>
+            <label>
+                <input type="radio" name="video" value="https://www.youtube.com/watch?v=3JZ_D3ELwOQ">
+                유튜브 영상 2
+            </label>
+            <label>
+                <input type="radio" name="video" value="https://www.youtube.com/watch?v=tgbNymZ7vqY">
+                유튜브 영상 3
+            </label>
+
+        <br>
+        <button class="btn" type="button" onclick="handleVideoSelection()">선택한 영상 보기</button>
+
+            
+    </div>
+
+
+    <hr>
     </div>
 
     <!-- 오른쪽 섹션 -->
@@ -207,6 +236,7 @@
             <li>학과: <a href="https://futureplus.hansung.ac.kr/ko/department/future" target="_blank">미래인재학부</a></li>
             <li>학번: 2406001</li>
             <li>주소: 경기도</li>
+            <li>하는일 : 퍼포먼스마케터 </li>
         </ol>
         
         <h2>🔹 취미</h2>

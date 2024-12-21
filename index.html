@@ -23,7 +23,7 @@
         /* 전체 레이아웃 스타일 */
         body {
             background: rgb(30, 30, 30); /* 어두운 배경색 */
-            font-family: 'GangwonEdu_OTFBoldA', sans-serif; /* 기본 폰트 */
+            font-family: 'Pretendard-Regular', sans-serif; /* 기본 폰트 */
             margin: 0;
             padding: 0;
             display: flex;
@@ -103,10 +103,13 @@
             background-color: rgb(80, 80, 80); /* 테이블 헤더 배경 */
         }
 
+        /* 캡션 스타일 (h2와 동일한 폰트, 흰색 적용) */
         caption {
+            font-family: 'Paperlogy-8ExtraBold', sans-serif;
+            font-size: 24px;
             font-weight: bold;
+            color: #ffffff; /* 흰색 */
             margin-bottom: 10px;
-            color: #ffc107; /* 캡션 색상 */
         }
 
         /* 링크 스타일 */
@@ -126,14 +129,48 @@
         };
 
         function openPopup() {
-            const popup = window.open("", "popupWindow", "width=400,height=300");
+            const popup = window.open("", "popupWindow", "width=400,height=400");
             popup.document.write(`
                 <html>
-                <head><title> ⚠ 공지사항 </title></head>
-                <body style="text-align:center; padding:20px; font-family:sans-serif;">
-                    <h2>팝업 내용</h2>
-                    <p>여기에 내용을 입력하세요.</p>
-                    <button onclick="window.close()" style="padding:10px 20px; background-color:#4caf50; color:white; border:none; border-radius:5px; cursor:pointer;">닫기</button>
+                <head>
+                    <title> ⚠ 공지사항 </title>
+                    <style>
+                        body {
+                            background-color: rgb(40, 40, 40);
+                            color: white;
+                            font-family: 'Pretendard-Regular', sans-serif;
+                            padding: 20px;
+                            text-align: center;
+                        }
+                        h2 {
+                            font-family: 'Paperlogy-8ExtraBold', sans-serif;
+                            color: #ffc107;
+                        }
+                        button {
+                            padding: 10px 20px;
+                            background-color: #2fa0fc;
+                            color: white;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                        button:hover {
+                            background-color: #45a049;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h2>필수요소 적용 안내</h2>
+                    <hr>
+                    <ol>
+                        <h3>From</h3>
+                        <li>1. 회원가입 항목 > 사람인가요 유 무 선택</li>
+
+                        <h3>Event</h3>
+                        <li>1. 페이지가 로딩 되었을 때, 팝업창 자동 실행</li>
+                        <li>2. 팝업을 닫을 때 누르는 버튼</li>
+                    </ol>
+                    <button onclick="window.close()">닫기</button>
                 </body>
                 </html>
             `);
